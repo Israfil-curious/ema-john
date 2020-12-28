@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import fakeData from '../../fakeData';
 import './Shop.css'
 import Product from '../Product/Product'
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
     console.log(fakeData);
@@ -12,22 +13,23 @@ const Shop = () => {
     const [cart, setCart] = useState([]);
 
     const handleAddProduct = (product) =>{
-        console.log("Cliked me", product);
+        const newCart = [...cart,product];
+        setCart(newCart);
     }
 
     return (
         <div className="shop-container">
 
             <div className="product-container">
-                <ul>
+                <>
                     {
                         products.map(pd => <Product handleAddProduct={handleAddProduct} product={pd}></Product>)
                     }
-                </ul>
+                </>
             </div>
 
-            <div>
-                <h1>this is cart</h1>
+            <div className="cart-container">
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
