@@ -1,0 +1,18 @@
+.review-item {
+    display: flex;
+    color: white;
+    background-color: hotpink;
+    border: none;
+    box-shadow: 5px 5px 7px gray;
+    margin: 30px 50px 0 50px;
+    padding: 50px;
+}
+.review-item button{
+    border: none;
+    height: 30px;
+    background-color: goldenrod;
+    padding: 5px 10px;
+}
+.review-item img{
+    margin-right: 30px;
+}

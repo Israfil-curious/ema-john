@@ -1,0 +1,10 @@
+.review {
+    display: flex;
+}
+.reviewItems {
+    width: 80%;
+}
+.control {
+    text-align: center;
+    margin-top: 30px;
+}
